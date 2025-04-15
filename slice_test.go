@@ -1,9 +1,10 @@
 package gopie_test
 
 import (
-	"gopie"
 	"reflect"
 	"testing"
+
+	"github.com/waclawthedev/gopie"
 )
 
 func TestMap(t *testing.T) {

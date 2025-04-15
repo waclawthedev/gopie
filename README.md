@@ -13,6 +13,8 @@ Useful functions ported to Go (map, reduce, filter etc.)
 
 ## Functions list
 
+✅ Don't hesitate to [create issue](https://github.com/waclawthedev/gopie/issues/new) with request of desired function
+
 ### Related to slices
 
 *  Map - works in similar way as map function in Python
@@ -41,3 +43,11 @@ Useful functions ported to Go (map, reduce, filter etc.)
 *  Add - adds element to set. Does nothing if such element already exists
 *  Remove - removes element from set. Does nothing if such element doesn't exist
 *  Contains - returns true if set contains provided element
+
+## How to contribute
+
+1. Fork this repository
+2. Create a new branch with prefix in name "feat/" or "fix/"
+3. Commit your changes
+4. Push to your fork
+5. Open a Pull Request to this original repository

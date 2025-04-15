@@ -1,8 +1,9 @@
 package gopie_test
 
 import (
-	"gopie"
 	"testing"
+
+	"github.com/waclawthedev/gopie"
 )
 
 func TestPtrTo(t *testing.T) {

@@ -3,8 +3,9 @@ package gopie_test
 import (
 	"encoding/json"
 	"fmt"
-	"gopie"
 	"testing"
+
+	"github.com/waclawthedev/gopie"
 )
 
 func TestMust(t *testing.T) {
