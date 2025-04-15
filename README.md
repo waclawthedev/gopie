@@ -1,6 +1,6 @@
 <div align="center">
 
-<img height="190" src="https://github.com/waclawthedev/gopie/blob/dev/gopie_logo.png">
+<img height="190" src="https://github.com/waclawthedev/gopie/blob/main/gopie_logo.png">
 
 <h1 align="center">GoPie</h1>
 
