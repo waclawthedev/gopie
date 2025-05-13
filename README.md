@@ -11,6 +11,36 @@ Useful functions ported to Go (map, reduce, filter etc.)
 
 </div>
 
+## Quick start
+
+### Install
+
+```sh
+go get -u github.com/waclawthedev/gopie
+```
+
+### Import & use
+
+```go
+package main
+
+import (
+    "fmt"
+
+    "github.com/waclawthedev/gopie"
+)
+
+func main() {
+    set := gopie.NewSet[string]()
+
+    set.Add("one")
+    set.Add("two")
+
+    set.Remove("one")
+    fmt.Println(set.Contains("hello"))
+}
+```
+
 ## Functions list
 
 ✅ Don't hesitate to [create issue](https://github.com/waclawthedev/gopie/issues/new) with request of desired function
@@ -26,12 +56,18 @@ Useful functions ported to Go (map, reduce, filter etc.)
 ### Related to strings
 
 *  TruncateString - returns first N runes of provided string with "..." at the end. Works properly even with emojis etc.
+*  IsVisible - returns true if character is visible. Control characters considered as invisible. unicode.IsPrint & unicode.IsGraphic avoided to bypass bug described here: [https://github.com/golang/go/issues/73673](https://github.com/golang/go/issues/73673)
+*  WithoutInvisibleChars - returns string without invisible chars
 
 ### Related to pointers
 
 *  PtrTo - returns point to provided value. Useful to get pointer if you want to avoid variable declaration.
 *  PtrValueOrDefault - safely gets value by pointer or returns provided default value if nil.
 *  PtrValueOrZero - safely gets value by pointer or returns zero value according to type
+
+### Related to cryptography
+
+*  MD5 - returns MD5 hash of string
 
 ### Related to functions
 
