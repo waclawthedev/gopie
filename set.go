@@ -2,9 +2,14 @@ package gopie
 
 // Set is implementation of threads unsafe set.
 type Set[T comparable] interface {
+	// Add adds element to set.
 	Add(v T)
+	// Remove removes element from set.
 	Remove(v T)
+	// Contains returns true if element is presented in set.
 	Contains(v T) bool
+	// Iterate iterates ofer Set executing passed function on every element. Once function returns false - iteration stops.
+	Iterate(f func(v T) bool)
 }
 
 type threadUnsafeSet[T comparable] struct {
@@ -31,4 +36,13 @@ func (s threadUnsafeSet[T]) Contains(v T) bool {
 	_, ok := s.m[v]
 
 	return ok
+}
+
+// Iterate iterates ofer Set executing passed function on every element. Once function returns false - iteration stops.
+func (s threadUnsafeSet[T]) Iterate(f func(v T) bool) {
+	for k := range s.m {
+		if !f(k) {
+			break
+		}
+	}
 }
